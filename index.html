@@ -4,63 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أرشيف الموسيقار محمد الأمين</title>
-    <meta name="description" content="أرشيف شامل لكلمات أغاني الموسيقار السوداني محمد الأمين.">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-content">
-            <h1 class="logo">محمد الأمين <span>أرشيف الكلمات</span></h1>
-            <button id="theme-toggle" class="theme-btn" aria-label="تبديل الوضع">
-                <i class="fas fa-moon"></i>
-            </button>
-        </div>
-    </nav>
-
-    <main id="app" class="container">
-        
-        <div id="home-view" class="view active">
-            <header class="hero">
-                <img src="assets/img/hero.jpg" alt="محمد الأمين يعزف العود" class="hero-img">
-                <div class="hero-overlay">
-                    <h2>نغمةٌ في مقطع، وسرٌ في وتر</h2>
-                    <p>استكشف روائع الكلمات الخالدة للموسيقار محمد الأمين</p>
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="search-input" placeholder="ابحث باسم الأغنية أو بكلمة منها...">
-                    </div>
+    <header class="hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/img/hero.jpg');">
+        <div class="container">
+            <nav>
+                <div class="logo">أرشيف ود اللمين</div>
+            </nav>
+            <div class="hero-content">
+                <h1>موسوعة كلمات أغاني الأستاذ محمد الأمين</h1>
+                <p>إرث فني خالد.. ندوّنه للأجيال</p>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="ابحث عن أغنية (مثلاً: زاد الشجون)...">
                 </div>
-            </header>
-
-            <section class="songs-grid" id="songs-container">
-                </section>
+            </div>
         </div>
+    </header>
 
-        <div id="song-view" class="view">
-            <button id="back-btn" class="btn btn-primary"><i class="fas fa-arrow-right"></i> العودة للأرشيف</button>
-            <article class="lyrics-container">
-                <h2 id="song-title" class="song-header"></h2>
-                <div class="lyrics-actions">
-                    <button id="copy-btn" class="btn btn-icon" title="نسخ الكلمات"><i class="fas fa-copy"></i></button>
-                    <button id="share-btn" class="btn btn-icon" title="مشاركة الأغنية"><i class="fas fa-share-alt"></i></button>
-                </div>
-                <div id="song-lyrics" class="lyrics-content"></div>
-            </article>
+    <main class="container">
+        <section id="songsList" class="songs-grid">
+            </section>
+
+        <div id="lyricsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <div id="modalLyrics" class="lyrics-text"></div>
+            </div>
         </div>
-
     </main>
 
     <footer>
         <div class="container footer-content">
             <img src="assets/img/profile.jpg" alt="محمد الأمين" class="footer-avatar">
-            <p>صُنع بحب لتوثيق الفن السوداني الأصيل</p>
-        </div>
-    </footer>
+            <p>جميع الحقوق محفوظة &copy; 2026 - أرشيف محمد الأمين</p>
+            <p>تم التطوير بواسطة <span class="developer-name">amrokhal</span></p>
 
-    <button id="back-to-top" class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+            <div class="visitor-counter" style="margin-top: 20px; border-top: 1px solid #444; pt-3">
+                <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 10px;">عدد محبي الموسيقار الذين زاروا الأرشيف:</p>
+                <a href="https://www.hitwebcounter.com" target="_blank">
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=mohamed-alamin-archive&style=0005&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" />
+                </a>
+            </div>
+            </div>
+    </footer>
 
     <script src="assets/js/app.js"></script>
 </body>
