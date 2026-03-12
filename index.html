@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أرشيف الموسيقار محمد الأمين</title>
+    <meta name="description" content="أرشيف شامل لكلمات أغاني الموسيقار السوداني محمد الأمين.">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">محمد الأمين <span>أرشيف الكلمات</span></h1>
+            <button id="theme-toggle" class="theme-btn" aria-label="تبديل الوضع">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="app" class="container">
+        
+        <div id="home-view" class="view active">
+            <header class="hero">
+                <img src="assets/img/hero.jpg" alt="محمد الأمين يعزف العود" class="hero-img">
+                <div class="hero-overlay">
+                    <h2>نغمةٌ في مقطع، وسرٌ في وتر</h2>
+                    <p>استكشف روائع الكلمات الخالدة للموسيقار محمد الأمين</p>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="ابحث باسم الأغنية أو بكلمة منها...">
+                    </div>
+                </div>
+            </header>
+
+            <section class="songs-grid" id="songs-container">
+                </section>
+        </div>
+
+        <div id="song-view" class="view">
+            <button id="back-btn" class="btn btn-primary"><i class="fas fa-arrow-right"></i> العودة للأرشيف</button>
+            <article class="lyrics-container">
+                <h2 id="song-title" class="song-header"></h2>
+                <div class="lyrics-actions">
+                    <button id="copy-btn" class="btn btn-icon" title="نسخ الكلمات"><i class="fas fa-copy"></i></button>
+                    <button id="share-btn" class="btn btn-icon" title="مشاركة الأغنية"><i class="fas fa-share-alt"></i></button>
+                </div>
+                <div id="song-lyrics" class="lyrics-content"></div>
+            </article>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <img src="assets/img/profile.jpg" alt="محمد الأمين" class="footer-avatar">
+            <p>صُنع بحب لتوثيق الفن السوداني الأصيل</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
